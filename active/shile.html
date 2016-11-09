@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--<script type="text/javascript">
+    var  auth_token =  "0c426c6e0cd7d6c5dc6e37c8f46dafc2";
+</script>-->
+<html>
+
+	<head>
+		<!--<script id="load" src="js/base-loading.js"></script>-->
+		<meta charset="UTF-8">
+		<title>时时乐</title>
+		<meta name="viewport" id="met" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/gengzheng.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
+		<script type="text/javascript" src="js/shile.js"></script>
+		<style type="text/css" id="dynamic"></style>
+		<script type="text/javascript">
+		$(function(){
+			var liWidth = $("#ull li").innerWidth();
+			alert(liWidth);
+//			$(".ulimg").css({"height":liWidth+"px"});
+		});
+		</script>
+	</head>
+
+	<body>
+		<div id="viewport">
+
+			<!--10-11Top优化-->
+			<div id="top"> 
+				<div id="tuxing"> 
+					<ul>
+	    				<li>
+	    					<div class="sho" id="sho0"></div>
+	    					<canvas id="canvas0"  class="zt" width="" height="" style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">0</div>
+	    				</li>
+	    				<li>
+	    					<div class="sho" id="sho1"></div>
+	    					<canvas id="canvas1" class="zt" width="" height=""  style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">1</div>
+	    				</li>
+	    				<li>
+	    					<div class="sho" id="sho2"></div>
+	    					<canvas id="canvas2" class="zt"  width="" height="" style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">2</div>
+	    				</li>
+	    				<li>
+	    					<div class="sho" id="sho3"></div>
+	    					<canvas id="canvas3" class="zt"  width="" height=""  style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">3</div>
+	    				</li>
+	    				<li>
+	    					<div class="sho" id="sho4"></div>
+	    					<canvas id="canvas4" class="zt"  width="" height=""  style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">4</div>
+	    				</li>
+	    				<li>
+	    					<div class="sho" id="sho5"></div>
+	    					<canvas id="canvas5" class="zt"  width="" height=""  style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">5</div>
+	    				</li>
+	    				<li>
+	    					<div class="sho" id="sho6"></div>
+	    					<canvas id="canvas6" class="zt"   width="" height="" style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">6</div>
+	    				</li>
+	    				<li>
+	    					<div class="sho" id="sho7"></div>
+	    					<canvas id="canvas7" class="zt"  width="" height=""  style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">7</div>
+	    				</li>
+	    				<li>
+	    					<div class="sho" id="sho8"></div>
+	    					<canvas id="canvas8" class="zt"  width="" height="" style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">8</div>
+	    				</li>
+	    				<li>
+	    					<div class="sho" id="sho9"></div>
+	    					<canvas id="canvas9" class="zt"   width="" height="" style="position: absolute; bottom: 0em;"></canvas>
+	    					<div class="deta">9</div>
+	    				</li> 
+	    				
+	    			</ul>
+	    			
+				</div>
+				<div id="jilu">
+					<div id="left">近5个交易日尾数出现次数</div>
+					<!--<div id="right"><img src="img/btm3.svg" /></div>-->
+				</div>
+			</div>
+			<!--Top结束-->
+
+			<div class="center">
+				<div class="new">
+					<div id="new1" class="re">
+						<div id="one"><span id="shang">最新指数</span> <span id="xia">09:34:17</span></div>
+						<div id="two">
+							<span id="two1">2932.32</span>
+						</div>
+						<div id="three">
+							<span>+0.73</span>
+						</div>
+						<div id="four">
+							<span>+0.02%</span>
+						</div>
+					</div>
+				</div>
+				<!--最新指数结束-->
+				<span id="jing">竞猜还未开始，请耐心等待</span>
+				<div class="tim">
+					<span id="le">剩余下注时间</span>
+					<div id="daoji" class="daoji"></div>
+					<span id="ri">s</span>
+				</div>
+				<!--下注时间结束-->
+				<div class="guess">
+					<div class="lef">
+						<span class="die">猜中回报率</span>
+						<span id="huibao" class="red">1:10</span>
+					</div>
+					<div class="righ">
+						<span class="die">T币余额</span>
+						<span id="balance" class="red">50000</span>
+					</div>
+				</div>
+				<!--猜中结束-->
+				<div class="ull">
+					<ul id="ull" class="row">
+						<li><img class="ulimg" src="img/0-0@2x.png" /><span class="ulspan">x10T币</span></li>
+						<li><img class="ulimg" src="img/0-1@2x.png" /><span class="ulspan">x10T币</span></li>
+						<li><img class="ulimg" src="img/0-2@2x.png" /><span class="ulspan">x10T币</span></li>
+						<li><img class="ulimg" src="img/0-3@2x.png" /><span class="ulspan">x10T币</span></li>
+						<li><img class="ulimg" src="img/0-4@2x.png" /><span class="ulspan">x10T币</span></li>
+						<li><img class="ulimg" src="img/0-5@2x.png" /><span class="ulspan">x10T币</span></li>
+						<li><img class="ulimg" src="img/0-6@2x.png" /><span class="ulspan">x10T币</span></li>
+						<li><img class="ulimg" src="img/0-7@2x.png" /><span class="ulspan">x10T币</span></li>
+						<li><img class="ulimg" src="img/0-8@2x.png" /><span class="ulspan">x10T币</span></li>
+						<li><img class="ulimg" src="img/0-9@2x.png" /><span class="ulspan">x10T币</span></li>
+					</ul>
+				</div>
+				<!--ul结束-->
+				<div class="xiazhu">
+					<div id="zuo" class="hong">x10T币下注</div>
+					<div id="you" class="hui">x100T币下注</div>
+				</div>
+				<!--下注结束-->
+			</div>
+			<!--中间结束-->
+			<div class="footer">
+				<span class="foospan"></span>
+				<div class="fooimg">
+					<a href="myForecast.html"><img class="yuce" src="img/forecast01@2x.png" /></a>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="zhezhao">
+
+			<div class="jian">
+				<img src="img/ico_01_tip@2x.png" /> -10T币
+			</div>
+			<!--<div class="buzu">
+			<img src="img/ico_01_tip@2x.png" />T币余额不足
+		</div>
+		<div class="over">
+			<img src="img/ico_01_tip@2x.png" />竞猜结束
+		</div>
+		<div class="nostart">
+			<img src="img/ico_01_tip@2x.png" />竞猜未开始
+		</div>-->
+		</div>
+		<!--10-27修改点击增加loading-->
+		<div id="loading">
+			<div id="loading-gif">
+				
+				<div class="sk-fading-circle">
+			      	<div class="sk-circle1 sk-circle"></div>
+			      	<div class="sk-circle2 sk-circle"></div>
+			     	<div class="sk-circle3 sk-circle"></div>
+			     	<div class="sk-circle4 sk-circle"></div>
+			      	<div class="sk-circle5 sk-circle"></div>
+			      	<div class="sk-circle6 sk-circle"></div>
+			      	<div class="sk-circle7 sk-circle"></div>
+			      	<div class="sk-circle8 sk-circle"></div>
+			      	<div class="sk-circle9 sk-circle"></div>
+			      	<div class="sk-circle10 sk-circle"></div>
+			      	<div class="sk-circle11 sk-circle"></div>
+			      	<div class="sk-circle12 sk-circle"></div>
+			    </div>
+				
+			</div>
+		</div>
+		
+		
+		<!--修改结束-->
+		
+		<script type="text/javascript">
+			window.addEventListener("load", function() {
+				FastClick.attach(document.body);
+			}, false);
+			
+
+			//	$(document).ready(function () {
+			//		$('#sv0').jqbar({ barColor: '#D64747', value: 10, orientation: 'v' });
+			//
+			//		$('#sv1').jqbar({ barColor: '#FF681F', value: 70, orientation: 'v' });
+			//	
+			//		$('#sv2').jqbar({ barColor: '#ea805c', value: 50, orientation: 'v' });
+			//	
+			//		$('#sv3').jqbar({ barColor: '#88bbc8', value: 90, orientation: 'v' });
+			//	
+			//		$('#sv4').jqbar({ barColor: '#939393', value: 70, orientation: 'v' });
+			//	
+			//		$('#sv5').jqbar({ barColor: '#3a89c9', value: 50, orientation: 'v' });		
+			//	});
+		</script>
+	</body>
+
+</html>

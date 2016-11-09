@@ -1,0 +1,170 @@
+	.warp{
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.heard,.cate_nav,.search{
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	width: 100%;
+	height: 2.25rem;
+	color: #fff;
+	margin: 0 auto;
+	line-height: 2.25rem;
+}
+.heard{
+	background-color: #414141;
+}
+.heard>a{
+	display: block;
+	width: 4rem;
+	height: 2.25rem;
+	position: absolute;
+	left: 0;
+	font-size: .8rem;
+	top: 0;
+	z-index: 2;
+	color: #FFF;
+	line-height: 2.25rem;
+	text-align: center;
+}
+.heard>span{
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+	color: #FFF;
+	width: 2.25rem;
+	height: 2.25rem;
+	font-size: .8rem;
+	line-height: 2.25rem;
+	text-align: center;
+}
+.heard>p{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	font-family: "黑体";
+	height: 100%;
+	width: 100%;
+	color: #fff;
+	font-size:0.9rem;
+	text-align: center;
+	line-height: 2.25rem;
+}
+
+/*隐藏菜单*/
+.cate_nav{
+	border-top:1px solid #fff;
+	background-color: #414141;
+	display: none;
+}
+.cate_nav>ul{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.cate_nav>ul>li{
+	width: 25%;
+	height: 100%;
+}
+.cate_nav>ul>li>a{
+	display: block;
+	color: #fff;
+	text-align: center;
+	height: 2.25rem;
+	width: 100%;
+}
+.cate_nav>ul>li span{
+	height: 1.25rem;
+	display: block;
+	width: 100%;
+	font-size: .8rem;
+	line-height: 1.25rem;
+	text-align: center;
+	color: #fff;
+}
+.cate_nav>ul>li n{
+	display: block;
+	height: 1rem;
+	width: 100%;
+	line-height: 1rem;
+	text-align: center;
+	color: #fff;
+	font-size:.35rem;
+}
+													/*选项卡*/
+.nav_ul{
+	height: 1.75rem;
+	width: 100%;
+	font-family: "黑体";
+	padding: .3rem 0;
+}
+.nav_ul li{
+	width: 100%;
+	height: 100%;
+	margin-left: 20px;
+	height: 1.15rem;
+	font-size: .75rem;
+	border-left: .15rem solid orangered;
+	line-height: 1.15rem;
+	color: #000;
+}
+
+ 
+															/*内容*/
+.warp_box>.box{
+	width: 100%;
+	height:100%;
+	font-family: "黑体";
+	background-color:#E3E3E3;
+}															
+.box{
+	width: 100%;
+	height:100%;
+}
+.box>.box_wrap{
+	width: 100%;
+	padding:0 1rem;
+}
+.box>.box_wrap>.box_title{
+	height: 2.7rem;
+	width: 100%;
+	overflow: hidden;
+	padding: 1rem 0;
+}
+.box>.box_wrap>.box_title>p{
+	height: 1.7rem;
+	width:100%;
+	background-color:#fff;
+	color: #333;
+	line-height: 1.7rem;
+	padding-left: 1rem;
+	font-size: .7rem;
+}
+.box>.box_wrap>.box_img{
+	width: 100%;
+	height:100%;
+	padding:0 .5rem;
+	background-color: #fff;
+}
+.box>.box_wrap>.box_img>a{
+	display: block;
+	width: 100%;
+	height:100%;
+}
+.box>.box_wrap>.box_img>a>img{
+	width: 100%;
+	height:100%;
+}
+.box>.box_wrap>.box_text{
+	width: 100%;
+	height: 100%;
+	font-size: .5rem;
+	padding: 0 1rem;
+	background-color: #fff;
+	color: #333;
+}

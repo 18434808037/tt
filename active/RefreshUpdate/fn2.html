@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		$.ajax({
+						type: 'GET',
+						url: 'more2.json',
+						async:true,
+						dataType: 'json',
+						success: function(data) {
+							var result = '';
+							counter++;
+							pageEnd = num * counter;
+							pageStart = pageEnd - num;
+	
+							for(var i = pageStart; i < pageEnd; i++) {
+								
+								result += '<tr class="cont">' +
+									'<td class="kuan3 hui">' + data.lists2[i].qishu1 + '</td>' +
+									'<td class="kuan4">' + data.lists2[i].jingcai + '</td>' +
+									'<td class="kuan4 hui">' + data.lists2[i].Tb + '</td>' +
+									'<td class="kuan4">' + data.lists2[i].jieguo + '</td>' +
+									'<td class="kuan4 red">' + data.lists2[i].jiangli + '</td>' +
+									'</tr>';
+								if((i + 1) >= data.lists2.length) {
+									// 锁定
+									me.lock();
+									// 无数据
+									me.noData();
+									break;
+								}
+							}
+							// 为了测试，延迟1秒加载
+							setTimeout(function() {
+								$('.lists').eq(1).append(result);
+								// 每次数据加载完，必须重置
+								me.resetload();
+							}, 1000);
+						},
+						error: function(xhr, type) {
+							// console.log('Ajax error!');
+							// 即使加载出错，也得重置
+							me.resetload();
+						}
+					});
+		
+		
+			loadUpFn: function(me) {
+				
+				$.ajax({
+					type: 'GET',
+					url: 'update1.json',
+					async:false,
+					dataType: 'json',
+					success: function(data) {
+						var result = '';
+//						alert(data.lists1.length);
+						for(var i = 0; i < data.lists1.length; i++) {
+
+							result += '<tr class="cont">' +
+								'<td class="kuan1 hui">' + data.lists1[i].jutiqishu2 + '</td>' +
+								'<td class="kuan2">' + data.lists1[i].shijijieguo + '</td>' +
+								'<td id="look" class="kuan2 chakan">' + data.lists1[i].zhongjiangmingdan + '</td>' +
+								'</tr>';
+						}
+						// 为了测试，延迟1秒加载
+						setTimeout(function() {
+							$('.lists1').html(result);
+							// 每次数据加载完，必须重置
+							dropload.resetload();
+						}, 1000);
+					},
+					error: function(xhr, type) {
+						//                  alert('Ajax error!');
+						// 即使加载出错，也得重置
+						dropload.resetload();
+					}
+				});
+				
+				
+			},
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		function up2() {
+		
+		var dropload2 = $('.inner2').dropload({
+			
+			loadUpFn: function(me) {
+				$.ajax({
+					type: 'GET',
+					url: 'updata2.json',
+					async:false,
+					dataType: 'json',
+					success: function(data) {
+						var result = '';
+//						alert(data.lists2.length)
+						for(var i = 0; i < data.lists2.length; i++) {
+
+							result += '<tr class="cont">' +
+								'<td class="kuan3 hui">' + data.lists2[i].qishu2 + '</td>' +
+								'<td class="kuan4">' + data.lists2[i].jingcai + '</td>' +
+								'<td class="kuan4 hui">' + data.lists2[i].Tb + '</td>' +
+								'<td class="kuan4">' + data.lists2[i].jieguo + '</td>' +
+								'<td class="kuan4 red">' + data.lists2[i].jiangli + '</td>' +
+								'</tr>';
+						}
+						// 为了测试，延迟1秒加载
+						setTimeout(function() {
+							$('.lists2').html(result);
+							// 每次数据加载完，必须重置
+							dropload2.resetload();
+						}, 1000);
+					},
+					error: function(xhr, type) {
+						//                  alert('Ajax error!');
+						// 即使加载出错，也得重置
+						dropload2.resetload();
+					}
+				});
+				
+			},
+//			scrollArea: window,
+			loadDownFn: function(me) {
+				$.ajax({
+					type: 'GET',
+					url: 'more2.json',
+					async:false,
+					dataType: 'json',
+					success: function(data) {
+						var result = '';
+						counter++;
+						pageEnd = num * counter;
+						pageStart = pageEnd - num;
+
+						for(var i = pageStart; i < pageEnd; i++) {
+							
+							result += '<tr class="cont">' +
+								'<td class="kuan3 hui">' + data.lists2[i].qishu1 + '</td>' +
+								'<td class="kuan4">' + data.lists2[i].jingcai + '</td>' +
+								'<td class="kuan4 hui">' + data.lists2[i].Tb + '</td>' +
+								'<td class="kuan4">' + data.lists2[i].jieguo + '</td>' +
+								'<td class="kuan4 red">' + data.lists2[i].jiangli + '</td>' +
+								'</tr>';
+							if((i + 1) >= data.lists2.length) {
+								// 锁定
+								me.lock();
+								// 无数据
+								me.noData();
+								break;
+							}
+						}
+						// 为了测试，延迟1秒加载
+						setTimeout(function() {
+							$('.lists2').append(result);
+							// 每次数据加载完，必须重置
+							me.resetload();
+						}, 1000);
+					},
+					error: function(xhr, type) {
+						// console.log('Ajax error!');
+						// 即使加载出错，也得重置
+						me.resetload();
+					}
+				});
+				
+			}
+
+		});
+//		d2.resolve( "Pizza" );
+	}
+	</body>
+</html>

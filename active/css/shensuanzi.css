@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+body, h1, h2, h3, p, dl, dd, ol, ul, th, td, form, fieldset, input, button, textarea,div,span,img,a,ul,li{margin: 0; padding: 0;}
+html{-webkit-text-size-adjust: none; word-wrap: break-word;}
+h1, h2, h3{font-size: 100%;}
+ol, ul{list-style: none;}
+table{border-collapse: collapse; border-spacing: 0; empty-cells: show; font-size: inherit;}
+fieldset, img{border: 0;}
+cite, em, s, i, b{font-style: normal;}
+input, button, textarea, select{font-size: 100%;}
+body, input, button, textarea, select, option{font-size: normal;}
+body{
+	background-image:url(../img/bg02@2x.png); font-family:"微软雅黑";
+}
+a, input, textarea{text-decoration: none; outline: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+li, img, label, input{vertical-align: middle;}
+var{font-style: normal;}
+ins{text-decoration: none;}
+body{font-size: 20px;}
+#viewport{max-width: 720px;margin: auto; overflow: hidden;z-index:888;overflow-y: auto;}
+@-webkit-keyframes rotate{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg)}}
+@keyframes rotate{0%{transform:rotate(0deg);}0%{transform:rotate(360deg);}}
+@-webkit-keyframes bounceIn{0%{opacity: 0;-webkit-transform: scale(.3);}50%{opacity: 1;-webkit-transform: scale(1.05);}70%{-webkit-transform: scale(.9);}100%{-webkit-transform: scale(1);}}
+@keyframes bounceIn{0%{opacity: 0;transform: scale(.3);}50%{opacity: 1;transform: scale(1.05);}70%{transform: scale(.9);}100%{transform: scale(1);}}
+@-webkit-keyframes zoomOut{0%{-webkit-transform: scale(.3); opacity: 1;} 100%{-webkit-transform: scale(1); opacity: 0;}}
+@keyframes zoomOut{0%{transform: scale(.3); opacity: 1;} 100%{transform: scale(1); opacity: 0;}}
+
+@media only screen and (max-width: 320px) and (min-width: 280px){body{font-size: 10px;} #viewport{max-width: 320px;}
+.foospan {
+    position: absolute;
+    bottom: 0.5em !important;
+    left: 23% !important;}
+}
+@media only screen and (max-width: 479px) and (min-width: 320px){body{font-size: 12px;} #viewport{max-width: 480px;}}
+@media only screen and (max-width: 639px) and (min-width: 480px){body{font-size: 16px;} #viewport{max-width: 640px;}}
+@media only screen and (max-width: 719px) and (min-width: 640px){body{font-size: 24px;} #viewport{max-width: 720px;}}
+@media only screen and (min-width: 720px){body{font-size: 24px;} #viewport{max-width: 720px;}}
+.sz{ width:100%; font-size:1.2em; margin-top:1.2em; margin-bottom:1.2em; text-align:center;}
+.lf,.riqi,.rt{ display:inline-block; color:#000;font-family:"微软雅黑";}
+.new{ height:4em;border-radius: 12px;background-color: rgba(255,255,255,0.5); margin-left:1.8em; margin-right:1.8em;padding:0.6em;}
+#new1{ border-radius: 12px; height:4em;}
+.re{background-color: #d90000;}
+.gree{background-color:#008000;}
+
+.one,.two,.three,.four{color: white;display: inline-block;vertical-align: middle; line-height:2.3em;}
+#two{ margin-top:0.4em;}
+#three,#four{ margin-top:0.5em;}
+.one{width: 30%;
+	/*width: 9.625rem;*/
+    text-align: center;
+	height:3em;
+	line-height:1.5em;
+	font-size: 0.9em;
+    border-right: 1px solid white;
+    }
+.shang{display: block;margin-bottom: 0.3em;}
+.xia1,.xia2{display: inline-block;}
+.xia2{ margin-left:0.5em;}
+.two{font-size: 1.7em;text-align: center;width: 30%;}
+.three{font-size: 1em;text-align: center;width: 15%;}
+.four{font-size: 1em;text-align: center;width: 20%;}
+/*收盘指数结束*/
+.ce{width:auto;  margin: 2em 2em; height:auto; }
+
+.gue{color:black; font-size:1em;}
+.dt{display:inline-block;}
+/*猜上证指数结束*/ 
+
+.cai{ position: relative; width:auto;height:4em; /*8embackground-color:pink;*/ margin-top:1em; position:relative;}
+.cai img{    position: absolute;
+    left: 11.35em;
+    top: 3.5em;
+    width: 0.5em;}
+form{ display:inline-block; background-image:url(../img/point@2x.png); background-repeat:no-repeat;}
+
+ 
+.dg{overflow: hidden;  position: absolute; padding-left: 0.2em; display:inline-block; width:7.5em; height:1.9em; line-height:1em; border-radius:6px; font-size:2.4em; border: none; letter-spacing: 0.68em;z-index: 888; background-color:rgba(0,0,0,0); margin-top:-0.5em; }
+.hid{color: white; position: absolute; z-index:0; background-color: white; position: absolute; top: 0em; width: 1.8em;height: 94%; border: 0.3em solid #ddd;border-radius:6px; color: black;}
+/*#hid1{border: 0.3em solid #F15A24;}*/
+#hid2{left: 3em;}
+#hid3{left: 6em;}
+#hid4{left: 8.9em;}
+#hid5{left: 12em;}
+#hid6{left: 14.9em;}
+/*input:focus { outline: none;  -moz-outline-style: none;}*/
+
+/*#dg1{ border:0.1em solid #F15A24;}
+#dg4{ margin-right: 0.3em;}*/
+.point{display:inline-block; width:0.5em; height:0.8em; text-align:center;}
+.point .dim{ width:0.5em;height:0.5em;}
+.sub{ font-size:1em; float:right; display:inline-block;width:3.9em; height:4em; line-height:3.8em;background-color:#F15A24;text-align:center; color:white; border-radius:8px;}
+
+.bi{ margin-top:1em;}
+.bi .fon{ font-size:1.4em; color:black;}
+.bi .r{color:red;font-size:2.4em;}
+.bi .bim{ display:inline-block; width:2.2em; height:2.2em;}
+.bi .bim img{ width:2.2em; height:2.2em; vertical-align: text-bottom;}
+
+.foo{ width:15em; height:2em; line-height:2em; font-size:1.2em; margin:0 auto; text-align:center; border:0.2em solid white; color:white; border-radius:5px;}
+
+.footer{ position:absolute; width:100%; bottom:0.2em; height:auto; overflow:hidden; color:red ; margin:0 auto; text-align:center; /*margin-top:14rem;*/}
+.foospan{ position:absolute;bottom:1em;left:30%; display:inline;margin-right:0.1em; float:right;}
+
+.fooimg{width:5em;height:5em;margin-bottom: 0.5em; display:inline;margin-right:1em; float:right;}
+.fooimg img{width:5em;height:5em;}
+/*底部结束*/
+
+/*提示*/
+.tip{
+	 background-color:#5C5C5C;
+	 position:absolute; 
+	 top:0px;
+	 left:0px;
+	 z-index:9999;
+	 display:none;
+	}
+.tip .succ{
+	padding-top:1.2em;
+	width:70%;
+	height:auto;
+	line-height:2.6em;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#66CCFF;
+	margin-top:45%;
+	border-radius:10px;
+	display:block;
+	font-size:1.3em;
+	color:#E0F5FF;
+	 padding-bottom:1.5em;}
+.succ{ background-color:#66CCFF;}
+.know{background-color:#1899E1;height:2.6em; line-height:2.6em; font-size:1.2em; margin-left:1.5em; margin-right:1.5em; margin-top:1em; color:white;border-radius:10px;}
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+input::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+}
+
+
+/*数字键盘*/
+#dgkey{ display: none; width: 100%; background-color: darkgray;height: 15em; position: fixed;bottom: 0; font-size: 1em;}
+li{list-style: none;float: left;}
+.fh{width: 100%; height: 15%; background-color: white; }
+.fh li{ width: 27%; text-align: center; border-right: 0.1em solid gainsboro;margin-top: 0.3em; margin-bottom: 0.3em;}
+.fh .fh_four{width: 18% !important; border: none !important;}
+
+.sz1{width: 100%; height: 23%; /*background-color: red;*/}
+.sz1 li{background-color: white; width: 32%; margin-left: 0.3em; margin-top: 0.3em; height:2.7em ; border-radius: 6px; text-align: center;}
+li span{display: block;}
+
+.sz2{width: 100%; height: 21%; /*background-color: blue;*/}
+.sz2 li{background-color: white; width: 32%;  margin-left: 0.3em; height:2.7em ; border-radius: 6px; text-align: center;}
+
+.sz3{width: 100%; height: 21%; /*background-color: green;*/}
+.sz3 li{background-color: white; width: 32%;  margin-left: 0.3em; height:2.7em ; border-radius: 6px; text-align: center;}
+
+.sz4{width: 100%; height: 21%; /*background-color: green;*/}
+.sz4 li{background-color: white; width: 32%;  margin-left: 0.3em; height:2.7em ; border-radius: 6px; text-align: center; line-height: 2.7em;}
+
+
+
+/*10-11Top优化*/
+#top{margin-top: 0.8em;}
+#top .shoupan{display: inline-block; width: 18%; height: 5em;margin-right: 0.1em;}
+#top .shoupan div{text-align: center;}
+#top #one{margin-left: 0.8em;}
+#top .shoupan .up{color: #fff;height: 2.5em; line-height: 2.5em;border-top-left-radius: 8px;border-top-right-radius: 8px;}
+#top .shoupan .down{height: 2.5em;line-height:2.5em;background-color: rgba(255,255,255,0.7); border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;}
+/*背景-字体颜色更改设置*/
+.bgred{background-color: #d20000;}
+.bggree{background-color: #009245;}
+.fonred{color: #D20000;}
+.fongree{color: #009245;}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>涨跌乐</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="applicable-device" content="pc,mobile">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/ZDL.css">
+		<!--<link rel="stylesheet" type="text/css" href="css/font-awesome.css">-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/screen.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#tipInfoPanel').on('show.bs.modal', function(e) {
+					var modal = $(this);
+					var esseyId = e.relatedTarget.id;
+					console.log(esseyId);
+
+				});
+				onresize();
+			});
+
+			$(window).resize(function() {
+				onresize();
+			});
+
+			function onresize() {
+				var indexw = $(window).width() - 30;
+				var scale = indexw / 580;
+				var indexh = scale * 220;
+				$("#indexdiv").css("width", indexw + "px");
+				$("#indexdiv").css("height", indexh + "px");
+				var half2px = Math.floor(indexh * 0.50);
+				var half4px = Math.floor(indexh * 0.25);
+				$("#indexdiv p").css("fontSize", 2 * scale + "em");
+				$("#indexdiv1").css("height", half2px + "px");
+				$("#indexdiv2").css("height", half2px + "px");
+				$("#indexdiv1").css("paddingTop", half4px + "px");
+				$("#indexdiv1").css("paddingBottom", half4px + "px");
+				$("#indexdiv2").css("paddingTop", half4px + "px");
+				$("#indexdiv2").css("paddingBottom", half4px + "px");
+
+				var undownw = $(window).width() - 30;
+				var scale = undownw / 580;
+				var updownh = Math.floor(scale * 222);
+				$("#updowndiv").css("width", undownw + "px");
+				$("#updowndiv").css("height", updownh + "px");
+
+				$("#upsvg").css("width", Math.floor(181 * scale) + "px");
+				$("#upsvg").css("height", Math.floor(181 * scale) + "px");
+				$("#downsvg").css("width", Math.floor(181 * scale) + "px");
+				$("#downsvg").css("height", Math.floor(181 * scale) + "px");
+
+				$("#upsvg").css("marginTop", Math.floor(22 * scale) + "px");
+				$("#upsvg").css("marginLeft", Math.floor(20 * scale) + "px");
+				$("#downsvg").css("marginTop", Math.floor(22 * scale) + "px");
+				$("#downsvg").css("marginRight", Math.floor(20 * scale) + "px");
+
+				$("#updowndiv .profit1").css("fontSize", 2 * scale + "em");
+				$("#updowndiv .profit2").css("fontSize", 1.5 * scale + "em");
+
+				$("#bottomtimediv").css("fontSize", 1.5 * scale + "em");
+				$("#tablehead").css("fontSize", 1.5 * scale + "em");
+				$("#tablebody").css("fontSize", 1.5 * scale + "em");
+				$("ul li").css("fontSize", 1.6 * scale + "em");
+
+				$("#bottomspacediv").css("marginTop", 50 * scale + "px");
+			}
+		</script>
+	</head>
+
+	<body data-spy="scroll" data-target="#myTab">
+		<div id="main" class="container-fluid">
+			<div id="indexdiv">
+				<div id="indexdiv1" class="row">
+					<div class="col-xs-4">
+						<p id="morningTime0">早盘参与</p>
+					</div>
+					<div class="col-xs-4">
+						<p id="morningTime1">9:30</p>
+					</div>
+					<div class="col-xs-4">
+						<p>开盘指数</p>
+					</div>
+				</div>
+				<div id="indexdiv2" class="row">
+					<div class="col-xs-4">
+						<p id="afternoonTime0">晚盘参与</p>
+					</div>
+					<div class="col-xs-4">
+						<p id="afternoonTime1">9:30</p>
+					</div>
+					<div class="col-xs-4">
+						<p>开盘指数</p>
+					</div>
+				</div>
+			</div>
+			<div id="updowndiv" class="row">
+				<div id="updiv" class="pull-left text-center">
+					<div id="upsvg" data-toggle="modal" data-target="#tipInfoPanel"></div>
+					<p class="profit1">收益</p>
+					<p class="profit2" id="expectUpProfit">预期收益100</p>
+				</div>
+				<div id="downdiv" class="pull-right text-center">
+					<div id="downsvg" data-toggle="modal" data-target="#tipInfoPanel"></div>
+					<p class="profit1">收益</p>
+					<p class="profit2" id="expectDownProfit">预期收益120</p>
+				</div>
+			</div>
+			<div style="clear:both"></div>
+			<div id="bottomdiv">
+				<div id="bottomtimediv" class="row">
+					<div class="col-xs-6">
+						早盘参与09:00-11:30
+					</div>
+					<div class="col-xs-6">
+						午盘参与13:30-16:00
+					</div>
+				</div>
+				<div id="resulthead" class="row">
+					<div class="col-xs-3">日期</div>
+					<div class="col-xs-3">指数</div>
+					<div class="col-xs-3">指数</div>
+					<div class="col-xs-3">结果</div>
+				</div>
+				<div id="resultbody" class="row">
+					<div class="col-xs-3">日期</div>
+					<div class="col-xs-3">指数</div>
+					<div class="col-xs-3">指数</div>
+					<div class="col-xs-3" style="padding-right: 50px;">结果
+						<i class="fa fa-angle-double-right pull-right" aria-hidden="true"></i>
+					</div>
+					<div class="col-xs-3">日期</div>
+					<div class="col-xs-3">指数</div>
+					<div class="col-xs-3">指数</div>
+					<div class="col-xs-3" style="padding-right: 50px;">结果
+						<i class="fa fa-angle-double-right pull-right" aria-hidden="true"></i>
+					</div>
+				</div>
+
+				<ul id="myTab" class="nav nav-tabs">
+					<li>
+						<a href="#ruledesc" data-toggle="tab">规则说明</a>
+					</li>
+					<li class>
+						<a href="#historyrecord" data-toggle="tab">历史记录</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="myTabContent" class="tab-content">
+			<div id="ruledesc" class="tab-pane fade">
+				<p>1、参与时间?</p>
+				早盘参与时间：当天交易日15：10-次交易日9：00参与竞猜 午盘参与时间：当天交易日11：40-当天交易日12：55参与竞猜
+				<p>2、竞猜大盘涨跌对比？</p>
+				<p>早盘竞猜</p>
+				竞猜的交易日11：30收盘后的上证指数和竞猜的交易日9：30的上证开盘指数做比较，11：30的收盘高于9:30开盘价则为涨，反之则为跌；
+				<p>午盘竞猜</p>
+				竞猜的交易日15：00收盘的上证指数和竞猜的交易日11：30的上证收盘指数做比较，15：00的收盘高于11：30的收盘指数则为涨，反之则为跌；
+				<p>3、竞猜的T币限制？</p>
+				10≤n≤5000 参与该期竞猜活动的累计T币必须大于等于10小于等于5000T币。
+				<p>4、竞猜结果</p>
+				竞猜正确一方将平均获取竞猜失败一方的竞猜T币 例：用户张三使用了20T币竞猜涨，竞猜涨的一方总竞猜T币数量1000，竞猜跌的一方总竞猜T币数量2000，结果为涨，则竞猜获胜一方平均失败一方跌的T币奖励，则竞猜获胜的T币奖励为（参与竞猜的T币总数量/竞猜获胜一方的T币数量）*个人竞猜的T币数量，实际计算为（1000+2000）/1000*20=60。
+				<p>5、其他
+					<p>
+						1）9：30、11：30、15:00的上证大盘指数以天牛系统取到的大盘指数为准。 2）如遇竞猜的大盘指数对比为平，则参与用户全部获得竞猜的对应T 币数奖励。 3）通过非法或违规操作获得的T币收益，官方可直接对其进行处罚。 4）主办方对本协议拥有最终解释权。
+			</div>
+			<div id="historyrecord" class="tab-pane fade">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>期数</th>
+							<th>投注额</th>
+							<th>输赢</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>001</td>
+							<td>10000</td>
+							<td>赢</td>
+						</tr>
+						<tr>
+							<td>001</td>
+							<td>10000</td>
+							<td>赢</td>
+						</tr>
+						<tr>
+							<td>001</td>
+							<td>10000</td>
+							<td>赢</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 提示框 -->
+		<div id="tipInfoPanel" class="modal" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header" style="border-bottom: 0;">
+					</div>
+					<div class="modal-body" style="text-align: center;border-bottom: 0;">
+						<p>本期已停止竞猜,下期15:10分开始</p>
+					</div>
+					<div class="modal-footer" style="text-align: center;border-top: 0;">
+						<p>我知道了</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/testdata.js"></script>
+		<script type="text/javascript" src="js/risefailgame.js"></script>
+	</body>
+
+</html>

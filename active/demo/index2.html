@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>涨跌乐</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/main1.css">
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-3.3.0/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/screen.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        onresize();
+    });
+
+    $(window).resize(function() {
+        onresize();
+    });
+
+    function onresize() {
+        var indexw = $(window).width() - 30;
+        var scale = indexw / 580;
+        var indexh = scale * 220;
+        $("#indexdiv").css("width", indexw + "px");
+        $("#indexdiv").css("height", indexh + "px");
+        var half2px = Math.floor(indexh * 0.50);
+        var half4px = Math.floor(indexh * 0.25);
+        $("#indexdiv p").css("fontSize", 2 * scale + "em");
+        $("#indexdiv1").css("height", half2px + "px");
+        $("#indexdiv2").css("height", half2px + "px");
+        $("#indexdiv1").css("paddingTop", half4px + "px");
+        $("#indexdiv1").css("paddingBottom", half4px + "px");
+        $("#indexdiv2").css("paddingTop", half4px + "px");
+        $("#indexdiv2").css("paddingBottom", half4px + "px");
+
+        var undownw = $(window).width() - 30;
+        var scale = undownw / 580;
+        var updownh = Math.floor(scale * 222);
+        $("#updowndiv").css("width", undownw + "px");
+        $("#updowndiv").css("height", updownh + "px");
+
+        $("#upsvg").css("width", Math.floor(181 * scale) + "px");
+        $("#upsvg").css("height", Math.floor(181 * scale) + "px");
+        $("#downsvg").css("width", Math.floor(181 * scale) + "px");
+        $("#downsvg").css("height", Math.floor(181 * scale) + "px");
+
+        $("#upsvg").css("marginTop", Math.floor(22 * scale) + "px");
+        $("#upsvg").css("marginLeft", Math.floor(20 * scale) + "px");
+        $("#downsvg").css("marginTop", Math.floor(22 * scale) + "px");
+        $("#downsvg").css("marginRight", Math.floor(20 * scale) + "px");
+
+        $("#updowndiv .profit1").css("fontSize", 2 * scale + "em");
+        $("#updowndiv .profit2").css("fontSize", 1.5 * scale + "em");
+
+        $("#bottomtimediv").css("fontSize", 1.5 * scale + "em");
+        $("#tablehead").css("fontSize", 1.5 * scale + "em");
+        $("#tablebody").css("fontSize", 1.5 * scale + "em");
+        $("ul li").css("fontSize", 1.6 * scale + "em");
+
+        $("#bottomspacediv").css("marginTop", 50 * scale + "px");
+    }
+    </script>
+</head>
+
+<body>
+    <div id="main" class="container-fluid">
+        <div id="indexdiv">
+            <div id="indexdiv1" class="row">
+                <div class="col-xs-4">
+                    <p>早盘参与</p>
+                </div>
+                <div class="col-xs-4">
+                    <p>9:30</p>
+                </div>
+                <div class="col-xs-4">
+                    <p>开盘指数</p>
+                </div>
+            </div>
+            <div id="indexdiv2" class="row">
+                <div class="col-xs-4">
+                    <p>晚盘参与</p>
+                </div>
+                <div class="col-xs-4">
+                    <p>9:30</p>
+                </div>
+                <div class="col-xs-4">
+                    <p>开盘指数</p>
+                </div>
+            </div>
+        </div>
+        <div id="updowndiv" class="row">
+            <div id="updiv" class="pull-left text-center"">
+                <div id="upsvg"></div>
+                <p class="profit1">收益</p>
+                <p class="profit2">预期收益100</p>
+            </div>
+            <div id="downdiv" class="pull-right text-center"">
+                <div id="downsvg"></div>
+                <p class="profit1">收益</p>
+                <p class="profit2">预期收益120</p>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="bottomdiv">
+            <div id="bottomtimediv" class="row">
+                <div class="col-xs-6">
+                    早盘参与09:00-11:30
+                </div>
+                <div class="col-xs-6">
+                    午盘参与13:30-16:00
+                </div>
+            </div>
+            <div id="tablehead" class="row">
+                <div class="col-xs-3">日期</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">结果</div>
+            </div>
+            <div id="tablebody" class="row">
+                <div class="col-xs-3">日期</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">结果</div>
+                <div class="col-xs-3">日期</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">结果</div>
+            </div>
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active">
+                    <a href="#ruledesc" data-toggle="tab">规则说明</a>
+                </li>
+                <li class>
+                    <a href="#historyrecord" data-toggle="tab">历史记录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="ruledesc">
+            <p>W3Cschoool菜鸟教程是一个提供最新的web技术站点，本站免费提供了建站相关的技术文档，帮助广大web技术爱好者快速入门并建立自己的网站。菜鸟先飞早入行——学的不仅是技术，更是梦想。</p>
+        </div>
+        <div class="tab-pane fade" id="historyrecord">
+            <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+        </div>
+    </div>
+
+</body>
+</html>

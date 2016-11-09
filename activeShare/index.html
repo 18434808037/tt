@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>活动分享</title>
+	<link type="text/css" href="css/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
+</head>
+
+<body>
+		<div class="lists">
+			<ul>
+				<li>张**帅中奖10000</li>
+				<li>风***天中奖5000</li>
+				<li>留*欢中奖13000</li>
+				<li>虎*hu中奖2100</li>
+				<li>寒**钟中奖1000</li>
+				<li>king**k中奖6000</li>
+				<li>红***大中奖3300</li>
+				<li>李***皇中奖2150</li>
+				<li>爵***天中奖6200</li>
+				<li>刘***看中奖700</li>
+				<li>懒***样中奖10000</li>
+				<li>月***风中奖500</li>
+				<li>净***是中奖1000</li>
+				<li>日***田中奖900</li>
+				<li>名***修中奖800</li>
+				<li>山***睡中奖10000</li>
+				<li>内***吹中奖900</li>
+				<li>净***句中奖400</li>
+				<li>两***获中奖3000</li>
+				<li>题***比中奖600</li>
+			</ul>
+		</div>
+
+</body>
+<script type="text/javascript">
+$(function(){
+	var liHeight = $("li").outerHeight(true);
+//	alert(liHeight);
+	$(".lists").myScroll({
+		speed:30, 
+		rowHeight:liHeight 
+	});
+});
+</script>
+</html>

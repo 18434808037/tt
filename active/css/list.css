@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+body,html,div,table,th,tr,td,ul,li{margin: 0;padding: 0;}
+html {font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+body{font-family: "微软雅黑"; background-color:#F2F2F2;}	
+#viewport{ /*overflow:hidden;*/
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	}
+@media screen and (max-width : 320px){body {font-size: 11px;} }
+@media screen and (min-width : 321px) and (max-width : 480px){body {font-size: 13px;} }
+@media screen and (min-width : 480px) and (max-width : 580px) {body {font-size: 14px;} }
+@media screen and (min-width : 580px) and (max-width : 640px) {body {font-size: 16.7px;} }
+@media screen and (min-width : 640px) and (max-width : 720px) {body {font-size: 19px;}}
+@media screen and (min-width : 720px){body {font-size: 22px;}}

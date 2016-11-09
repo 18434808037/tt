@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="description" content="#">
+	    <meta name="keywords" content="#">
+		<title>时时乐</title>
+		<link rel="stylesheet" type="text/css" href="css/actShare.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/scroll.js"></script>
+	</head> 
+	<body>
+		<div id="viewport">
+				<div class="po1"></div>
+				<div class="po2">
+					<ul>
+						<li>张**帅中奖10000</li>
+						<li>风***天中奖5000</li>
+						<li>留*欢中奖13000</li>
+						<li>虎*hu中奖2100</li>
+						<li>寒**钟中奖1000</li>
+						<li>king**k中奖6000</li>
+						<li>红***大中奖3300</li>
+						<li>李***皇中奖2150</li>
+						<li>爵***天中奖6200</li>
+						<li>刘***看中奖700</li>
+						<li>懒***样中奖10000</li>
+						<li>月***风中奖500</li>
+						<li>净***是中奖1000</li>
+						<li>日***田中奖900</li>
+						<li>名***修中奖800</li>
+						<li>山***睡中奖10000</li>
+						<li>内***吹中奖900</li>
+						<li>净***句中奖400</li>
+						<li>两***获中奖3000</li>
+						<li>题***比中奖600</li>
+					</ul>
+				</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			
+			//背景 
+			var w=document.documentElement.clientWidth||document.body.clientWidth;
+			var h=document.documentElement.clientHeight||document.body.clientHeight;
+			$("#viewport").css({
+				"width":w+"px",
+				"height":h+"px",
+				"background-size":w+"px "+h+"px",
+				"background-attachment":"fixed",
+				"background-image":"url(img/shi.jpg)",
+				"background-repeat":"no-repeat"
+			});
+			
+			//滚动广告效果
+			var liHeight = $("li").outerHeight(true); 
+			$(".po2").myScroll({
+				speed: 50,
+				rowHeight: liHeight
+			});
+			
+			//判断移动端还是PC端
+			if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+				//				alert(0);
+				//跳转应用宝
+				$("body").click(function(){
+					window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.juexing.tniu"
+				})
+			} else {
+				//				console.log(1);
+				
+			}
+			
+		});
+	</script>
+
+</html>

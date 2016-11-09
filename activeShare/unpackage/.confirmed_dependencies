@@ -1,0 +1,46 @@
+{
+  "index.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "css/style.css",
+      "js/scroll.js"
+    ],
+    "refer": []
+  },
+  "sslsj.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "img/shi.jpg",
+      "css/actShare.css",
+      "js/scroll.js",
+      "css/style.css",
+      "css/costy.css"
+    ],
+    "refer": []
+  },
+  "sszm.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "css/actShare.css",
+      "img/shen.jpg",
+      "js/scroll.js"
+    ],
+    "refer": []
+  },
+  "zdlm.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "css/actShare.css",
+      "img/zd.jpg",
+      "js/scroll.js"
+    ]
+  },
+  "sslm.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "img/shi.jpg",
+      "css/actShare.css",
+      "js/scroll.js"
+    ]
+  }
+}

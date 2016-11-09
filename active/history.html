@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="UTF-8">
+		<title>固定布局，加载顶部、底部</title>
+		<link rel="stylesheet" type="text/css" href="css/myForecast.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="refresh.css"/>-->
+		<link rel="stylesheet" href="css/dropload.css">
+	</head>
+
+	<body>
+		<!--<div class="outer">-->
+			<div id="top">
+				<div id="titl">
+					<ul>
+						<li><img src="img/btm1-0.svg" /></li>
+						<li><img src="img/btm2-1.svg" /></li>
+					</ul>
+				</div>
+				<table  class="mydata">
+					<tr class="hei">
+						<th class="kuan1">具体期数</th>
+						<th class="kuan2">实际结果</th>
+						<th class="kuan2">中奖名单</th>
+					</tr>
+				</table>
+				<table class="myGuess">
+					<tr class="hei">
+						<th class="juti kuan3">具体期数</th>
+						<th class="tb kuan4">竞猜</th>
+						<th class="tb kuan4">T币</th>
+						<th class="tb kuan4">结果</th>
+						<th class="tb kuan4">奖励</th>
+					</tr>
+				</table>
+			</div>
+			<div class="inner" style="margin-top: 4em;">
+				<div class="mydata">
+					<table class="lists1"></table>
+				</div>
+				<div class="myGuess">
+					<table class="lists2"></table>
+				</div>
+			</div>
+			
+		<!--</div>-->
+		<!-- jQuery1.7以上 或者 Zepto 二选一，不要同时都引用 -->
+		<script type="text/javascript"  src="js/zepto.min.js"></script>
+		<script type="text/javascript"  src="js/dropload.min.js"></script>
+		<script type="text/javascript" src="js/history.js" ></script>
+		<!--script type="text/javascript" src="HISTORY1.js" ></script>-->
+
+	</body>
+
+</html>

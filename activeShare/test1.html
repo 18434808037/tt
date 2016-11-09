@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>纵向滚动</title>
+<style type="text/css">
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+div#outDiv {
+    margin: 80px auto;
+    border: 1px solid red;
+    overflow: hidden;
+    border: 1px solid red;
+    width: 240px;
+    height: 100px;
+}
+</style>
+<script type="text/javascript">
+    //取对象的封装
+    function $(eleStr) {
+        //为了区分，不同的取对象方式，以加前缀的方式来区分
+        //id加#  class加.  name加_  tagName不加前缀  
+        switch (eleStr.substr(0, 1)) {
+        case "#":
+            return document.getElementById(eleStr.substr(1));
+            break;
+        case ".":
+            return document.getElementsByClassName(eleStr.substr(1));
+            break;
+        case "_":
+            return document.getElementsByName(eleStr.substr(1));
+            break;
+        default:
+            return document.getElementsByTagName(eleStr);
+            break;
+        }
+    }
+
+    onload = function() {
+        $("#helpDiv").innerHTML = $("#inDiv").innerHTML;
+        setInterval(function() {
+            //  scrollTop  滚动的距离
+            //  offsetTop  当前元素离顶部的距离
+            if ($("#outDiv").scrollTop >= $("#helpDiv").offsetTop
+                    - $("#inDiv").offsetTop) {
+                $("#outDiv").scrollTop = 0;
+            }
+            $("#outDiv").scrollTop++;
+        }, 50);
+    }
+</script>
+</head>
+<body>
+    <div id="outDiv">
+        <div id="inDiv">
+            <ul>
+                <li>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+                <li>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</li>
+                <li>ccccccccccccccccccccccccccccccc</li>
+                <li>ddddddddddddddddddddddddddddddd</li>
+                <li>eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</li>
+                <li>fffffffffffffffffffffffffffffff</li>
+                <li>ggggggggggggggggggggggggggggggg</li>
+                <li>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</li>
+                <li>iiiiiiiiiiiiiiiiiiiiiiiiiiiiiii</li>
+                <li>jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</li>
+            </ul>
+        </div>
+        <div id="helpDiv"></div>
+    </div>
+
+</body>
+</html>

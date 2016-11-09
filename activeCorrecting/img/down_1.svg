@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 181.4 181.4">
+    <filter id="colorMatrix">
+        <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0 
+            0 0 0 1 0" />
+    </filter>
+    <defs>
+        <style>
+        .cls-1 {
+            fill: #004000;
+        }
+        
+        .cls-2 {
+            fill: url(#未命名的渐变_26);
+        }
+        
+        .cls-3 {
+            fill: url(#未命名的渐变_10);
+        }
+        
+        .cls-4 {
+            fill: #fff;
+        }
+        </style>
+        <linearGradient id="未命名的渐变_26" y1="85.41" x2="181.4" y2="85.41" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#22ac38" />
+            <stop offset="0.05" stop-color="#1fa638" />
+            <stop offset="0.27" stop-color="#118b36" />
+            <stop offset="0.51" stop-color="#087835" />
+            <stop offset="0.75" stop-color="#026d34" />
+            <stop offset="1" stop-color="#006934" />
+        </linearGradient>
+        <linearGradient id="未命名的渐变_10" x1="90.7" y1="2.07" x2="90.7" y2="88.26" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff" stop-opacity="0.6" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+        </linearGradient>
+    </defs>
+    <title>资源 2</title>
+    <g id="图层_2" data-name="图层 2" filter="url(#colorMatrix)">
+        <g id="图层_1-2" data-name="图层 1">
+            <circle class="cls-1" cx="90.7" cy="90.7" r="90.7" />
+            <ellipse class="cls-2" cx="90.7" cy="85.41" rx="90.7" ry="85.41" />
+            <path class="cls-3" d="M178.2,80.36C175.43,37.12,137.32,2.85,90.7,2.85S6,37.12,3.2,80.36Z" />
+            <path class="cls-4" d="M39.84,33.18H80.62V73H67.19V88.38H80.62v9H67.19v24.37l15.91-4,1.49,8.45a462.68,462.68,0,0,1-48.74,13.43l-3.48-9.95,7.46-1.49V84.41h9.45v41.78l9-2V73H39.84ZM49.29,64H70.67V42.13H49.29ZM97,32.68l9.45,2Q105,41.64,103,48.1h9.45V27.21h9.45V48.1h21.39v9.45H121.9V82.91h25.36v9.45H123.39q10.44,26.86,26.36,39.29l-5.47,10.45q-14.92-12.94-25.86-39.29a80.93,80.93,0,0,1-26.86,38.3l-8-6.47Q107,116.24,111,92.36H86.09V82.91h26.36V57.55H99.52a75.18,75.18,0,0,1-9,17.9l-8-7Q92.55,54.07,97,32.68Z" />
+        </g>
+    </g>
+</svg>

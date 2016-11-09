@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>历史记录</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no" />
+		<link rel="stylesheet" type="text/css" href="css/myForecast.css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/fastclick.js"></script>
+
+	</head>
+
+	<body>
+		<div id="viewport">
+			<div id="top">
+				<div id="titl">
+					<ul>
+						<li><img src="img/btm1-0.svg" /></li>
+						<li><img src="img/btm2-1.svg" /></li>
+					</ul>
+				</div>
+			</div>
+			<!--历史数据-->
+			<table id="hisData">
+				<tr class="hei">
+					<th class="kuan1">具体期数</th>
+					<th class="kuan2">实际结果</th>
+					<th class="kuan2">中奖名单</th>
+				</tr>
+				<tr class="cont">
+					<td class="kuan1 hui">10-10&nbsp;16:08</td>
+					<td class="kuan2">9</td>
+					<td id="look" class="kuan2 chakan">查看
+					</td>
+					
+				</tr>
+				
+			</table>
+			<!--历史数据结束-->
+			<!--我的竞猜-->
+			<table id="myGuess">
+				<tr class="hei">
+					<th class="juti kuan3">具体期数</th>
+					<th class="tb kuan4">竞猜</th>
+					<th class="tb kuan4">T币</th>
+					<th class="tb kuan4">结果</th>
+					<th class="tb kuan4">奖励</th>
+				</tr>
+				<tr  class="cont">
+					<td class="kuan3 hui">10-10&nbsp;16:08</td>
+					<td class="kuan4">9</td>
+					<td class="kuan4  hui">50</td>
+					<td class="kuan4">9</td>
+					<td class="kuan4 red">100</td>
+				</tr>
+			</table>
+			<!--我的竞猜结束-->
+			<div class="ji">当前还没有任何预测记录哦！</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/history.js"></script>
+	<script type="text/javascript">
+			window.addEventListener("load", function() {
+				FastClick.attach(document.body);
+			}, false);
+
+		//点击查看跳转查看名单
+//		var look = $("#look");
+//		look.click(looked);
+//		function looked(){
+//			window.location.href="sslList.html";
+//		}
+	</script>
+</html>

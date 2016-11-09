@@ -1,0 +1,81 @@
+{
+  "shile1.html": {
+    "resources": [
+      "js/l001_edge.js",
+      "img/Pasted.svg",
+      "img/bg01@2x.png",
+      "img/0-7@2x.png",
+      "js/jquery.min.js",
+      "img/0-3@2x.png",
+      "img/0-8@2x.png",
+      "img/0-1@2x.png",
+      "img/0-0@2x.png",
+      "img/Pasted2.svg",
+      "img/0-4@2x.png",
+      "img/Pasted4.svg",
+      "Loading.html",
+      "js/fastclick.js",
+      "img/0-5@2x.png",
+      "img/0-6@2x.png",
+      "img/ico_01_tip@2x.png",
+      "css/shile.css",
+      "js/base-loading.js",
+      "img/forecast01@2x.png",
+      "img/0-9@2x.png",
+      "img/0-2@2x.png",
+      "js/edge.6.0.0.min.js",
+      "css/reset.css",
+      "js/shile.js"
+    ]
+  },
+  "titl.html": {
+    "resources": [
+      "shile1.html",
+      "shile.html"
+    ],
+    "refer": [
+      "shile1.html",
+      "shile.html"
+    ]
+  },
+  "shile.html": {
+    "resources": [
+      "js/l001_edge.js",
+      "img/bg01@2x.png",
+      "img/0-7@2x.png",
+      "js/jquery.min.js",
+      "img/0-3@2x.png",
+      "img/0-8@2x.png",
+      "img/0-1@2x.png",
+      "img/0-0@2x.png",
+      "img/0-4@2x.png",
+      "Loading.html",
+      "js/fastclick.js",
+      "js/shile.js",
+      "img/0-5@2x.png",
+      "img/0-6@2x.png",
+      "img/ico_01_tip@2x.png",
+      "css/shile.css",
+      "js/base-loading.js",
+      "img/forecast01@2x.png",
+      "img/0-9@2x.png",
+      "img/0-2@2x.png",
+      "js/edge.6.0.0.min.js",
+      "css/reset.css",
+      "myForecast.html",
+      "img/1-3@2x.png",
+      "img/1-4@2x.png",
+      "img/2-4@2x.png",
+      "img/2-3@2x.png"
+    ],
+    "refer": [
+      "myForecast.html"
+    ]
+  },
+  "myForecast.html": {
+    "resources": [
+      "css/myForecast.css",
+      "js/myForecast.js"
+    ]
+  }
+}

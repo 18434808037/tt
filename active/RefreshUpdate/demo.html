@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="UTF-8">
+    <title>tab加载多个数据</title>
+    <link rel="stylesheet" type="text/css" href="css/myForecast.css"/>
+    <link rel="stylesheet" href="css/dropload.css">
+</head>
+<body>
+<div class="tab">
+    <a href="javascript:;" class="item cur">菜单一</a>
+    <a href="javascript:;" class="item">菜单二</a>
+</div>
+<div class="content">
+    <div class="lists"></div>
+    <div class="lists"></div>
+</div>
+<!-- jQuery1.7以上 或者 Zepto 二选一，不要同时都引用 -->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/dropload.min.js"></script>
+<script>
+$(function(){
+    var itemIndex = 0;
+    var tab1LoadEnd = false;
+    var tab2LoadEnd = false;
+    // tab
+    $('.tab .item').on('click',function(){
+        var $this = $(this);
+        itemIndex = $this.index();
+        $this.addClass('cur').siblings('.item').removeClass('cur');
+        $('.lists').eq(itemIndex).show().siblings('.lists').hide();
+        // 如果选中菜单一
+        if(itemIndex == '0'){
+            // 如果数据没有加载完
+            if(!tab1LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            }
+        // 如果选中菜单二
+        }else if(itemIndex == '1'){
+            if(!tab2LoadEnd){
+                // 解锁
+                dropload.unlock();
+                dropload.noData(false);
+            }else{
+                // 锁定
+                dropload.lock('down');
+                dropload.noData();
+            }
+        }
+        // 重置
+        dropload.resetload();
+    });
+    var counter = 0;
+    // 每页展示4个
+    var num = 5;
+    var pageStart = 0,pageEnd = 0;
+    // dropload
+    var dropload = $('.content').dropload({
+        scrollArea : window,
+        loadDownFn : function(me){
+            // 加载菜单一的数据
+            if(itemIndex == '0'){
+                $.ajax({
+                    type: 'GET',
+                    url: 'json/moreLeft.json',
+                    dataType: 'json',
+                    success: function(data){
+                        var result = '';
+                        counter++;
+                        pageEnd = num * counter;
+                        pageStart = pageEnd - num;
+                        if(pageStart <= data.lists1.length){
+                            for(var i = pageStart; i < pageEnd; i++){
+                                result += '<tr class="cont">' +
+								'<td class="kuan1 hui">' + data.lists1[i].jutiqishu + '</td>' +
+								'<td class="kuan2">' + data.lists1[i].shijijieguo + '</td>' +
+								'<td id="look" class="kuan2 chakan">' + data.lists1[i].zhongjiangmingdan + '</td>' +
+								'</tr>';
+                                if((i + 1) >= data.lists1.length){
+                                    // 数据加载完
+                                    tab1LoadEnd = true;
+                                    // 锁定
+                                    me.lock();
+                                    // 无数据
+                                    me.noData();
+                                    break;
+                                }
+                            }
+                            // 为了测试，延迟1秒加载
+                            setTimeout(function(){
+                                $('.lists').eq(0).append(result);
+                                // 每次数据加载完，必须重置
+                                me.resetload();
+                            },1000);
+                        }
+                    },
+                    error: function(xhr, type){
+                        console.log('Ajax error!');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            // 加载菜单二的数据
+            }else if(itemIndex == '1'){
+                $.ajax({
+                    type: 'GET',
+                    url: 'json/moreRight.json',
+                    dataType: 'json',
+                    success: function(data){
+                        var result = '';
+                        for(var i = 0; i < data.lists2.length; i++){
+                            result += '<tr class="cont">' +
+								'<td class="kuan3 hui">' + data.lists2[i].qishu + '</td>' +
+								'<td class="kuan4">' + data.lists2[i].jingcai + '</td>' +
+								'<td class="kuan4 hui">' + data.lists2[i].Tb + '</td>' +
+								'<td class="kuan4">' + data.lists2[i].jieguo + '</td>' +
+								'<td class="kuan4 red">' + data.lists2[i].jiangli + '</td>' +
+								'</tr>';
+                        }
+                        // 为了测试，延迟1秒加载
+                        setTimeout(function(){
+                            $('.lists').eq(1).append(result);
+                            // 每次数据加载完，必须重置
+                            me.resetload();
+                        },1000);
+                    },
+                    error: function(xhr, type){
+                        console.log('Ajax error!');
+                        // 即使加载出错，也得重置
+                        me.resetload();
+                    }
+                });
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>

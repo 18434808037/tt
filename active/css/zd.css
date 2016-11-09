@@ -1,0 +1,485 @@
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+ol,
+ul,
+th,
+td,
+form,
+fieldset,
+input,
+button,
+textarea {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	-webkit-text-size-adjust: none;
+	word-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+	font-size: 100%;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	font-size: inherit;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+cite,
+em,
+s,
+i,
+b {
+	font-style: normal;
+}
+
+input,
+button,
+textarea,
+select {
+	font-size: 100%;
+}
+
+body,
+input,
+button,
+textarea,
+select,
+option {
+	font-size: normal;
+}
+
+body {
+	background-color: #f2f2f2;
+}
+
+a,
+input,
+textarea {
+	text-decoration: none;
+	outline: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+li,
+img,
+label,
+input {
+	vertical-align: middle;
+}
+
+var {
+	font-style: normal;
+}
+
+ins {
+	text-decoration: none;
+}
+
+body {
+	font-size: 20px;
+	background:transparent;
+}
+
+#viewport {
+	max-width: 720px;
+	margin: auto;
+	overflow: hidden;
+	z-index: 888;
+}
+
+.b img {
+	vertical-align: top;
+}
+
+.b1,
+.b2,
+.b3,
+.b4,
+.b5 {
+	position: relative;
+	overflow: hidden;
+}
+
+.b1 {
+	background-color: #FFFFFF;
+	min-height: 500px;
+}
+
+.b1 img {
+	width: 100%;
+}
+
+.b1 .words {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg)
+	}
+	100% {
+		-webkit-transform: rotate(360deg)
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	0% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.05);
+	}
+	70% {
+		-webkit-transform: scale(.9);
+	}
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(.3);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	70% {
+		transform: scale(.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes zoomOut {
+	0% {
+		-webkit-transform: scale(.3);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 0;
+	}
+}
+
+@keyframes zoomOut {
+	0% {
+		transform: scale(.3);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
+@media only screen and (max-width: 319px) {
+	body {
+		font-size: 12px;
+	}
+	#viewport {
+		max-width: 320px;
+	}
+}
+
+@media only screen and (max-width: 479px) and (min-width: 320px) {
+	body {
+		font-size: 12px;
+	}
+	#viewport {
+		max-width: 480px;
+	}
+}
+
+@media only screen and (max-width: 639px) and (min-width: 480px) {
+	body {
+		font-size: 16px;
+	}
+	#viewport {
+		max-width: 640px;
+	}
+}
+
+@media only screen and (max-width: 719px) and (min-width: 640px) {
+	body {
+		font-size: 24px;
+	}
+	#viewport {
+		max-width: 720px;
+	}
+}
+
+@media only screen and (min-width: 720px) {
+	body {
+		font-size: 24px;
+	}
+	#viewport {
+		max-width: 720px;
+	}
+}
+
+#zd {
+	/*background-color:#5C5C5C;*/
+	/*background-color: rgba(0,0,0,0.5);*/
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*修改*/
+
+.zdco {
+	position: relative;
+	/*width:27em;*/
+	width: 75%;
+	height: auto;
+	overflow: hidden;
+	background-color: #66ccff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	margin-top: 6em;
+	margin-bottom: 5em;
+	padding-bottom: 1.5em;
+	font-size: 0.8em;
+}
+
+#zdh {
+	width: 100%;
+	height: 3.5em;
+	/*background-color:blue;*/
+	text-align: center;
+	line-height: 4em;
+	font-size: 2.5em;
+	color: white;
+}
+
+
+/*.re{ color:red;}
+.gree{ color:green;}*/
+
+.czd {
+	width: 100%;
+	height: auto;
+	/*background-color:pink;*/
+	text-align: center;
+}
+
+#czsj,
+.zdp {
+	font-size: 1.3em;
+	color: white;
+}
+
+#czcd {
+	font-size: 2.5em;
+	margin-left: 0.5em;
+	color: red;
+}
+
+.cdyl {
+	height: auto;
+	/*background-color:purple;*/
+	text-align: center;
+	margin-top: 2.5em;
+	/*margin-left:2em;
+	margin-right:2em;*/
+	font-size: 1.3em;
+}
+
+.cdtb,
+.yl {
+	display: inline-block;
+}
+
+.zong,
+.ying {
+	color: white;
+}
+
+.cdtb {
+	margin-right: 1.2em;
+}
+
+#tb,
+#xs {
+	color: #D9F33F;
+}
+
+.inp {
+	height: 4.4em;
+	background-color: white;
+	text-align: center;
+	margin-top: 1.5em;
+	margin-left: 2em;
+	;
+	margin-right: 2em;
+	;
+	line-height: 4.4em;
+	border-radius: 8px;
+	color: black;
+}
+
+.inp input {
+	width: 80%;
+	height: 90%;
+	border: none;
+	color: #FFA267;
+	font-size: 1.4em;
+}
+
+
+/*修改*/
+
+input::-webkit-input-placeholder {
+	color: #CCCCCC;
+	font-size: 1em;
+}
+
+input:-moz-placeholder {
+	color: #CCCCCC;
+	font-size: 1em;
+}
+
+input:-ms-input-placeholder {
+	/* IE10+ */
+	color: #CCCCCC;
+	font-size: 1em;
+}
+
+.xztb {
+	display: inline-block;
+	height: auto;
+	font-size: 1.1em;
+	/*background-color:red;*/
+	margin-top: 1.5em;
+	margin-left: 2em;
+	color: white;
+}
+
+.benqi {
+	display: inline-block;
+	margin-left: 2em;
+	margin-right: 2em;
+	/*background-color:green;*/
+	margin-top: 1.5em;
+	font-size: 1.1em;
+	color: white;
+}
+
+#kttb {
+	color: #D9F33F;
+	margin-left: 1em;
+}
+
+.once {
+	width: auto;
+	height: 2.7em;
+	background-color: #1899E1;
+	border-radius: 10px;
+	font-size: 1.8em;
+	color: white;
+	text-align: center;
+	margin-left: 1.5em;
+	margin-top: 1.5em;
+	margin-right: 1.5em;
+	line-height: 2.7em;
+}
+
+
+/*提示*/
+
+.tip {
+	background-color: #5C5C5C;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 99999999999;
+	display: none;
+}
+
+.tip .succ {
+	padding-top: 1.2em;
+	width: 70%;
+	height: auto;
+	line-height: 2.6em;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #66CCFF;
+	margin-top: 45%;
+	border-radius: 10px;
+	display: block;
+	font-size: 1.3em;
+	color: #E0F5FF;
+	padding-bottom: 1.5em;
+}
+
+.succ {
+	background-color: #66CCFF;
+}
+
+.know {
+	background-color: #1899E1;
+	height: 2.6em;
+	line-height: 2.6em;
+	font-size: 1.2em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+	margin-top: 1em;
+	color: white;
+	border-radius: 10px;
+}
+
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+

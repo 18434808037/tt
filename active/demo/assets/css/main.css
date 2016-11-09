@@ -1,0 +1,148 @@
+body{
+   background-image: url("pics/background.png");
+   color: #fff; 
+}
+
+
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    
+}
+
+#indexdiv {
+    background-image: url(pics/index_bg.svg);
+    background-repeat: no-repeat;
+}
+
+#indexdiv p {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    transform: translateY(-50%);
+    margin-bottom: 0;
+}
+
+#indexdiv1 .row {
+    top: 50%;
+}
+
+#updowndiv {
+    margin-top: 40px;
+    background-repeat: no-repeat;
+    background-image: url("pics/updown_bg.svg");
+}
+
+#updiv {
+    width: 181px;
+    height: 181px;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block;
+    /*transform: translate(-50%, -50%);*/
+    transform: translateY(-50%);
+    float: left;
+    background-repeat: no-repeat;
+    background-image: url("pics/up.svg");
+}
+
+#updiv:hover{
+    background-image: url("pics/up_1.svg");
+}
+
+#updiv:active{
+    background-image: url("pics/up_2.svg");
+}
+
+#downdiv {
+    width: 181px;
+    height: 181px;
+    margin-top: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    transform: translateY(-50%);
+    float: right;
+    background-repeat: no-repeat;
+    background-image: url("pics/down.svg");
+}
+
+#downdiv:hover{
+    background-image: url("pics/down_1.svg");
+}
+
+#downdiv:active{
+    background-image: url("pics/down_2.svg");
+}
+
+#profitdiv {
+    margin-top: 24px;
+}
+
+#profitdiv div {
+    text-align: center;
+}
+
+#updowndiv  .profit1 {
+    font-size: 2em;
+    color: #fff;
+    margin-top:40px;
+}
+
+#updowndiv  .profit2 {
+    font-size: 1.5em;
+    color: #fff;
+    margin-top:20px;
+}
+
+#updowndiv:after{
+    clear: both;
+}
+
+#bottomdiv {
+    margin-top: 54px;
+    padding-top: 20px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#bottomtimediv {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#tablehead{
+    background-color: rgba(0,0,0,0.3); 
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#tablebody{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#bottomdiv .row > div{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+#tablehead{
+    font-size: 2em;
+    /*background-color: #000;*/
+    text-align: center;
+}
+
+#tablebody{
+    font-size: 1.6em;
+    /*background-color: #000;*/
+    text-align: center;
+}
+
+ul li{
+    font-size:2em;
+    color:#fff;
+}
+
+#table ul {
+    list-style: none;
+}

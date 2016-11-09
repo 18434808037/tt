@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+body,html,div,table,th,tr,td,ul,li{margin: 0;padding: 0;}
+html {font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+body{font-family: "微软雅黑"; background-color:#F2F2F2;}	
+#viewport{ /*overflow:hidden;*/
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	}
+@media screen and (max-width : 320px){body {font-size: 11px;} }
+@media screen and (min-width : 321px) and (max-width : 480px){body {font-size: 13px;} }
+@media screen and (min-width : 480px) and (max-width : 580px) {body {font-size: 14px;} }
+@media screen and (min-width : 580px) and (max-width : 640px) {body {font-size: 16.7px;} }
+@media screen and (min-width : 640px) and (max-width : 720px) {body {font-size: 19px;}}
+@media screen and (min-width : 720px){body {font-size: 22px;}}
+
+/*没有数据时候显示*/
+.ji{position: fixed;left:50%;top:50%;transform:translateX(-50%) translateY(-50%);}
+/*顶部显示*/
+
+#top{height: 5.4em;background-color: white;position: fixed;top: 0em;z-index: 99;}
+#top #titl{width: 65%; height: 5.4em; margin: 0 auto;}
+#top #titl ul{width: 100%;height: 5.4em;}
+#top #titl ul li{width: 50%; height:4.8em;float: left;list-style: none;margin-top: 0.3em;}
+#top #titl ul li img{width: 100%; height: 100%;}
+
+table{ width:100%; height:auto; border-collapse:collapse;font-family: "微软雅黑";table-layout: fixed}
+th{ height: 3.4em;line-height: 3.4em; font-size: 1.35em; background-color:#F2F2F2; font-family: "微软雅黑";}
+tr,td{ text-align:center;}
+.cont td{background-color: white;height: 3em;line-height: 3em; font-size: 1.1em; font-family: "微软雅黑"; border-bottom: 0.1em solid #ddd;}
+
+.mydata{display: table;overflow: auto;height: auto;}
+.myGuess{display: none;height: auto;}
+
+/*历史数据*/
+
+.red{color: #FF0000;}
+.green{color: #59B200;}
+.hei{color: #333;}
+.hui{color: #777;}
+.chakan{color: #1899E1;}
+
+.kuan1{width: 40%;}
+.kuan2{width: 30%;}
+
+.cha_wid1{width: 50%;}
+.cha_wid2{width: 25%;}
+th .nick{width: 50%;}
+th .guenum,.award{width: 25%;}
+.kuan3{width: 28%;}
+.kuan4{width: 18%;}
+/*超出部分省略号代替*/
+#overflo{ overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}

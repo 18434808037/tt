@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+    var  auth_token =  "0c426c6e0cd7d6c5dc6e37c8f46dafc2";
+</script>
+<html>
+	<head>
+		<!--<script src="js/base-loading.js"></script>-->
+		<meta charset="UTF-8">
+		<title>时时乐</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"> 
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="email=no"/>
+		<meta name="description" content="#">
+		<meta name="keywords" content="#">
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shile.css"/>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<!--<script type="text/javascript" src="js/dapan.js" ></script>-->
+        <script type="text/javascript" src="js/fastclick.js" ></script>
+	</head>
+	<body>
+    <div id="viewport">
+
+		<div class="center"> 
+			<div class="new"> 
+				<div id="new1" class="re">
+					<div id="one"><span id="shang">最新指数</span> <span id="xia">09:34:17</span></div>
+					<div id="two">
+						<span id="dapanzhishu"><!--2932.32--></span>
+					</div>
+					<div id="three">
+						<span id="fudu"><!--+0.73--></span> 
+					</div>
+					<div id="four">
+						<span id="percent"><!--+0.02%--></span>
+					</div>
+				</div>
+			</div>
+			<!--最新指数结束-->
+			<span id="jing">竞猜还未开始，请耐心等待</span>
+		 	<div class="tim">
+				<span id="le">剩余下注时间</span>
+				<div id="daoji" class="daoji"></div>
+				<span id="ri">s</span>
+			</div>
+			<!--下注时间结束-->
+			<div class="guess">
+				<div class="lef">
+					<span class="die">猜中回报率</span>
+					<span id="huibao" class="red">1:10</span>
+				</div>
+				<div class="righ">
+					<span class="die">T币余额</span>
+					<span id="balance" class="red">50000</span>
+				</div>
+			</div>
+			<!--猜中结束-->
+		  <div class="ull">
+				<ul id="ull">
+					<li><img class="ulimg" src="img/0-0@2x.png" /><span class="ulspan">x10T币</span></li>
+					<li><img class="ulimg" src="img/0-1@2x.png" /><span class="ulspan">x10T币</span></li>
+					<li><img class="ulimg" src="img/0-2@2x.png" /><span class="ulspan">x10T币</span></li>
+					<li><img class="ulimg" src="img/0-3@2x.png" /><span class="ulspan">x10T币</span></li>
+					<li><img class="ulimg" src="img/0-4@2x.png" /><span class="ulspan">x10T币</span></li>
+					<li><img class="ulimg" src="img/0-5@2x.png" /><span class="ulspan">x10T币</span></li>
+					<li><img class="ulimg" src="img/0-6@2x.png" /><span class="ulspan">x10T币</span></li>
+					<li><img class="ulimg" src="img/0-7@2x.png" /><span class="ulspan">x10T币</span></li>
+					<li><img class="ulimg" src="img/0-8@2x.png" /><span class="ulspan">x10T币</span></li>
+					<li><img class="ulimg" src="img/0-9@2x.png" /><span class="ulspan">x10T币</span></li>
+				</ul>
+			</div>
+			<!--ul结束-->
+			<div class="xiazhu">
+				<div id="zuo" class="hong">x10T币下注</div>
+				<div id="you" class="hui">x100T币下注</div>
+			</div>
+            <!--下注结束-->
+		</div>
+		<!--中间结束-->
+		<div class="footer">
+			<span class="foospan"></span>
+			<div class="fooimg">
+				<a href="myForecast.html"><img class="yuce" src="img/forecast01@2x.png" /></a>
+			</div>
+		</div>
+        
+    </div>
+    
+	<div id="zhezhao">
+
+		<div class="jian">
+			<img src="img/ico_01_tip@2x.png" />
+			-10T币
+		</div>
+		<!--<div class="buzu">
+			<img src="img/ico_01_tip@2x.png" />T币余额不足
+		</div>
+		<div class="over">
+			<img src="img/ico_01_tip@2x.png" />竞猜结束
+		</div>
+		<div class="nostart">
+			<img src="img/ico_01_tip@2x.png" />竞猜未开始
+		</div>-->
+	</div>
+	
+	</body>
+	<script type="text/javascript" src="js/shile.js" ></script>
+	<script type="text/javascript">
+//		window.addEventListener( "load", function() {
+//		    FastClick.attach( document.body );
+//		}, false );
+		 
+		$(function() {
+//					$.getJSON("new.json", function(data) {
+//						$.each(data, function(i, msg) {
+//							daPan = msg["zhishu"];
+//							fu = msg["zhangdiefu"];
+//							perc = msg["baifenbi"];
+//							
+//						})
+//						$("#dapanzhishu").text(daPan); //显示处理后的数据 
+//						$("#fudu").text(fu);
+//						$("#percent").text(perc);
+//					});
+					$.ajax({
+					    url: 'json/new.json',
+					    type: 'get',
+					    dataType: 'json',
+					    timeout: 1000,
+					    error: function(){
+					        console.log("请求出现错误");
+					    },
+					    success: function(msg){
+					        console.log("请求成功");
+					        daPan = msg["zhishu"];
+					        $("#dapanzhishu").text(daPan);
+					    }
+					});
+		});
+	</script>
+</html>

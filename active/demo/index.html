@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>涨跌乐</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/main.css">
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/screen.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        onresize();
+    });
+
+    $(window).resize(function() {
+        onresize();
+    });
+
+    function onresize() {
+        var indexw = $(window).width() - 30;
+        var scale = indexw / 580;
+        var indexh = scale * 220;
+        $("#indexdiv").css("width", indexw + "px");
+        $("#indexdiv").css("height", indexh + "px");
+        var half2px = Math.floor(indexh * 0.50);
+        var half4px = Math.floor(indexh * 0.25);
+        $("#indexdiv p").css("fontSize", 2 * scale + "em");
+        $("#indexdiv1").css("height", half2px + "px");
+        $("#indexdiv2").css("height", half2px + "px");
+        $("#indexdiv1").css("paddingTop", half4px + "px");
+        $("#indexdiv1").css("paddingBottom", half4px + "px");
+        $("#indexdiv2").css("paddingTop", half4px + "px");
+        $("#indexdiv2").css("paddingBottom", half4px + "px");
+
+        var undownw = $(window).width() - 30;
+        var scale = undownw / 580;
+        var updownh = Math.floor(scale * 222);
+        $("#updowndiv").css("width", undownw + "px");
+        $("#updowndiv").css("height", updownh + "px");
+        $("#updiv").css("width", Math.floor(181 * scale) + "px");
+        $("#updiv").css("height", Math.floor(181 * scale) + "px");
+        $("#updiv").css("marginTop", Math.floor(updownh / 2) + "px");
+        $("#updiv").css("marginLeft", Math.floor(20 * scale) + "px");
+        $("#downdiv").css("width", Math.floor(181 * scale) + "px");
+        $("#downdiv").css("height", Math.floor(181 * scale) + "px");
+        $("#downdiv").css("marginTop", Math.floor(updownh / 2) + "px");
+        $("#downdiv").css("marginRight", Math.floor(20 * scale) + "px");
+        $("#updowndiv .profit1").css("marginTop", updownh + "px");
+        $("#updowndiv .profit2").css("marginTop", 16 + "px");
+        $("#updowndiv .profit1").css("fontSize", 2 * scale + "em");
+        $("#updowndiv .profit2").css("fontSize", 1.5 * scale + "em");
+
+
+        $("#bottomdiv").css("marginTop", 120 * scale + "px");
+
+        $("#bottomtimediv").css("fontSize", 1.5 * scale + "em");
+        $("#tablehead").css("fontSize", 1.5 * scale + "em");
+        $("#tablebody").css("fontSize", 1.5 * scale + "em");
+        $("ul li").css("fontSize", 1.6 * scale + "em");
+
+        $("#bottomspacediv").css("marginTop", 50 * scale + "px");
+    }
+    </script>
+</head>
+
+<body>
+    <div id="main" class="container-fluid">
+        <div id="indexdiv">
+            <div id="indexdiv1" class="row">
+                <div class="col-xs-4">
+                    <p>早盘参与</p>
+                </div>
+                <div class="col-xs-4">
+                    <p>9:30</p>
+                </div>
+                <div class="col-xs-4">
+                    <p>开盘指数</p>
+                </div>
+            </div>
+            <div id="indexdiv2" class="row">
+                <div class="col-xs-4">
+                    <p>晚盘参与</p>
+                </div>
+                <div class="col-xs-4">
+                    <p>9:30</p>
+                </div>
+                <div class="col-xs-4">
+                    <p>开盘指数</p>
+                </div>
+            </div>
+        </div>
+        <div id="updowndiv">
+            <div id="updiv" style="text-align: center;">
+                <p class="profit1">收益</p>
+                <p class="profit2">预期收益100</p>
+            </div>
+            <div id="downdiv" style="text-align: center;">
+                <p class="profit1">收益</p>
+                <p class="profit2">预期收益120</p>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="bottomdiv">
+            <div id="bottomtimediv" class="row">
+                <div class="col-xs-6">
+                    早盘参与09:00-11:30
+                </div>
+                <div class="col-xs-6">
+                    午盘参与13:30-16:00
+                </div>
+            </div>
+            <div id="tablehead" class="row">
+                <div class="col-xs-3">日期</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">结果</div>
+            </div>
+            <div id="tablebody" class="row">
+                <div class="col-xs-3">日期</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">结果</div>
+                <div class="col-xs-3">日期</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">指数</div>
+                <div class="col-xs-3">结果</div>
+            </div>
+            <ul class="nav nav-tabs nav-bar" style="left:50%;position: absolute; transform:translateX(-50%);border-bottom:0;">
+                    <li>
+                        <a href="#">关注</a>
+                    </li>
+                    <li>
+                        <a href="#">规则</a>
+                    </li>
+                    <li>
+                        <a href="#">历史</a>
+                    </li>
+            </ul>
+            <div id="bottomspacediv" style="margin-top: 30px; height: 10px"></div>
+        </div>
+    </div>
+</body>
+
+</html>
